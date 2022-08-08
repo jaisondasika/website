@@ -1,0 +1,211 @@
+:root {
+  --color-interactive: yellow;
+  --color-background: blue;
+  --color-text: white;
+  --color-shadow: black;
+  --font-family-serif: Georgia, Times, serif;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --shadow-factor: 0.1em;
+  --shadow-factor-animated: 0.2em;
+  --shadow-multiply-x: 1;
+  --shadow-multiply-y: 1;
+}
+
+html {
+  font-family: var(--font-family-serif);
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--color-interactive);
+  margin: calc(env(safe-area-inset-top, 0rem) + 0.5rem) 0.5rem
+    calc(env(safe-area-inset-bottom, 0rem) + 0.5rem);
+}
+
+section {
+  background: var(--color-background);
+  box-sizing: border-box;
+  color: var(--color-text);
+  padding: calc(var(--gutter) * 2);
+}
+section + section {
+  margin-top: 0.5rem;
+}
+
+section.support {
+  --color-background: red;
+}
+
+section.projects {
+  --color-background: black;
+  --color-shadow: blue;
+}
+
+section > div {
+  --column: 100%;
+  --font-scale: 2rem;
+  --gutter: 3rem;
+  margin: 0 auto;
+  padding: var(--gutter) 0;
+  width: min(1200px, calc(100% - var(--gutter)));
+}
+
+@media (min-width: 600px) {
+  section > div {
+    --column: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  section > div {
+    --font-scale: 3rem;
+    --gutter: 4rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+.social a {
+  font-weight: bold;
+  line-height: 1;
+}
+
+a {
+  color: var(--color-interactive);
+  display: inline-block;
+  line-height: 0.9;
+  padding-right: calc(var(--gutter) * 0.125);
+  text-decoration: none;
+}
+
+a:focus-visible {
+  color: var(--color-text);
+  outline: none;
+  position: relative;
+  text-decoration: underline;
+  z-index: 1;
+}
+@media (hover: hover) {
+  a:hover {
+    color: var(--color-text);
+  }
+}
+
+h1 {
+  font-size: calc(var(--font-scale) * 1.2);
+}
+
+h2 {
+  font-size: calc(var(--font-scale) * 1.4);
+}
+
+.social a {
+  display: inline-block;
+  margin-bottom: calc(var(--gutter) * 0.125);
+}
+
+h3 {
+  margin-bottom: 0.25em;
+}
+
+h3,
+.social a {
+  font-family: var(--font-family-sans-serif);
+  font-size: calc(var(--font-scale) * 1.4);
+}
+
+button {
+  appearance: none;
+  background: #ff0100;
+  border-radius: 50%;
+  border: none;
+  box-shadow: var(--shadow-factor) var(--shadow-factor) 0 var(--color-shadow);
+  color: var(--color-interactive);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: calc(var(--font-scale) * 0.8);
+  font-weight: bold;
+  height: var(--font-scale);
+  line-height: var(--font-scale);
+  padding: 0;
+  position: absolute;
+  right: 1.5rem;
+  text-align: center;
+  top: 1.5rem;
+  width: var(--font-scale);
+}
+@media (hover: hover) {
+  button:hover {
+    color: var(--color-text);
+  }
+}
+button:focus-visible {
+  box-shadow: 0 0 0 var(--shadow-factor) var(--color-text);
+  color: var(--color-text);
+  outline: none;
+  z-index: 1;
+}
+
+p {
+  font-size: calc(var(--font-scale) * 0.8);
+}
+
+h1,
+h2 {
+  border-bottom: 0.085em solid var(--color-shadow);
+  display: inline-block;
+  line-height: 0.8;
+  padding-right: calc(var(--gutter) * 0.125);
+}
+
+h1,
+h2,
+p,
+a {
+  text-shadow: calc(var(--shadow-multiply-x) * var(--shadow-factor))
+    calc(var(--shadow-multiply-y) * var(--shadow-factor)) 0 var(--color-shadow);
+}
+
+h1,
+h2,
+p {
+  font-style: italic;
+}
+
+h2 + p {
+  font-style: normal;
+  margin-top: calc(var(--gutter) * 0.5);
+}
+
+nav {
+  margin-top: calc(var(--gutter) * 1.5);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul.blocks {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--gutter) * -0.5);
+  width: calc(100% + var(--gutter));
+}
+
+ul.blocks li {
+  box-sizing: border-box;
+  margin: calc(var(--gutter) * 0.5);
+  width: calc(var(--column) - var(--gutter));
+}
