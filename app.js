@@ -14,6 +14,7 @@ fun.addEventListener("click", async () => {
       const permissionState = await DeviceOrientationEvent.requestPermission();
       if (permissionState === "granted") {
         go();
+        playMusic();
       } else {
         alert("ok nevermind then");
       }
@@ -41,6 +42,16 @@ function go() {
     window.requestAnimationFrame(update);
   }
 
+  function playMusic() {
+    <Audio src="HouseMusic.mp3" controls></Audio>
+
+  }
+
+
+  function dropDiscoBall {
+
+    
+  }
   update();
 
   window.addEventListener("mousemove", (event) => {
