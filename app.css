@@ -136,13 +136,13 @@ button {
   font-family: inherit;
   font-size: calc(var(--font-scale) * 0.5);
   font-weight: bold;
-  height: var(--font-scale);
-  line-height: var(--font-scale);
+  height: var(--font-scale*2);
+  line-height: var(--font-scale*2);
   padding: 0;
   position: absolute;
-  right: 2rem;
+  right: 4rem;
   text-align: center;
-  top: 1.5rem;
+  top: 4rem;
   width: var(--font-scale);
 }
 @media (hover: hover) {
