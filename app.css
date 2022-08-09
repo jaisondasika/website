@@ -107,7 +107,7 @@ h1 {
 }
 
 h2 {
-  font-size: calc(var(--font-scale) * 1.4);
+  font-size: calc(var(--font-scale) * .4);
 }
 
 .social a {
