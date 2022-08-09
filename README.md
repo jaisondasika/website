@@ -1,3 +1,3 @@
-# Website
+# This is my personal website
 
-#hello world
+Exists as a pipeline to find other useful links and my other platforms!
