@@ -34,7 +34,7 @@ section + section {
 }
 
 section.support {
-  --color-background: red;
+  --color-background: rgb(77, 255, 0);
 }
 
 section.projects {
