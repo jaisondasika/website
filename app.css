@@ -136,8 +136,8 @@ button {
   font-family: inherit;
   font-size: calc(var(--font-scale) * 0.5);
   font-weight: bold;
-  height: var(--font-scale*7);
-  line-height: var(--font-scale*2);
+  height: var(--font-scale*9);
+  line-height: var(--font-scale*20);
   padding: 0;
   position: absolute;
   right: 3rem;
