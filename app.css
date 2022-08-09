@@ -33,7 +33,7 @@ section + section {
   margin-top: 0.5rem;
 }
 
-section.link {
+section.links {
   --color-background: rgb(255, 24, 24);
 }
 
@@ -141,14 +141,14 @@ button {
   cursor: pointer;
   font-family: inherit;
   font-weight: bold;
-  height: calc(var(--font-scale)*3);
-  line-height: calc(var(--font-scale*1));
+  height: calc(var(--font-scale)*2.2);
+  line-height: calc(var(--font-scale*2));
   padding: 0;
   position: absolute;
   right: 3rem;
   text-align: center;
   top: 3rem;
-  width: calc(var(--font-scale)*3);
+  width: calc(var(--font-scale)*2.2);
 }
 @media (hover: hover) {
   button:hover {
