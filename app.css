@@ -134,13 +134,13 @@ button {
   color: var(--color-interactive);
   cursor: pointer;
   font-family: inherit;
-  font-size: calc(var(--font-scale) * 0.8);
+  font-size: calc(var(--font-scale) * 0.5);
   font-weight: bold;
   height: var(--font-scale);
   line-height: var(--font-scale);
   padding: 0;
   position: absolute;
-  right: 1.5rem;
+  right: 2rem;
   text-align: center;
   top: 1.5rem;
   width: var(--font-scale);
