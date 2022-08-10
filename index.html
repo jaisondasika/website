@@ -15,9 +15,17 @@
       <section class="social">
         <div>
           <h1>
-            jaison.funnn
+            jaison.fun
            <!--- <button aria-label="Enable fun visual effect">!</button>-->
           </h1>
+          <script>
+          function playMusic(){
+            var music = new Audio("HouseMusic.mp3");
+            music.play();
+            }
+          </script>
+            <input type="button" value="ONLY CLICK ONCE" onclick="playMusic()" />
+
           <nav aria-label="Social media links">
             <ul>
               <li>
@@ -56,16 +64,5 @@
         </div>
       </section>
     </main>
-
-    <script src="app.js"></script>
-
-    <script>
-      function play() {
-        var audio = document.getElementById("audio");
-        audio.play();
-      }
-    </script>
-    <input button= "fun" value="PLAY bro how tf do i make this one the same as the one up there" onclick="play()">
-    <audio id="audio" src="HouseMusic.mp3"></audio>
   </body>
 </html>
