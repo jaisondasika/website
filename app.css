@@ -131,8 +131,8 @@ h3,
   font-size: calc(var(--font-scale) * 1.4);
 }
 
-button.fun {
- /* appearance: none;*/
+button {
+  appearance: none;
   background: #ff0100;
   border-radius: 50%;
   border: none;
