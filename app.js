@@ -1,6 +1,8 @@
 let init = false;
 const fun = document.getElementById("fun");
 fun.addEventListener("click", async () => {
+  playMusic();
+
   fun.remove();
   if (init) {
     return;
