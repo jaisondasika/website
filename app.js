@@ -48,7 +48,7 @@ function go() {
   }
 
 
-  function dropDiscoBall {
+  function dropDiscoBall() {
 
     
   }
