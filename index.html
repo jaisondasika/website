@@ -19,32 +19,40 @@
           </h1>
           <img id="bigpic" src="bigpic" style="display:none;" />
           <script>
+          var isPlaying = false;
+          var colors = ["red", "blue", "green", "yellow", "purple"]; // Add more colors as needed
+          var currentColorIndex = 0;
+          
+          function changeBackgroundColor() {
+            document.body.style.backgroundColor = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+          }
+          
           function playMusic(){
             var audio = document.getElementById("audio");
-            audio.play();
-            var pic = "discoball.gif"
-            document.getElementById('bigpic').src = pic.replace('90x90', '280x320');
-            document.getElementById('bigpic').style.display='block';
+            var pic = document.getElementById('bigpic');
+            if (!isPlaying) {
+              audio.play();
+              pic.src = "discoball.gif";
+              pic.style.display='block';
+              isPlaying = true;
+              colorInterval = setInterval(changeBackgroundColor, 1000); // Change color every second
+            } else {
+              audio.pause();
+              pic.style.display='none';
+              isPlaying = false;
+              document.body.style.backgroundColor = ""; // Reset to default background color
+              clearInterval(colorInterval); // Stop changing colors
             }
-          
+          }
           </script>
             <button aria-label="ONLY CLICK ONCE" onclick="playMusic()">PARTY MODE</button>
             <audio id="audio" src="HouseMusic.mp3"></audio>
-          <nav aria-label="Social media links">
-            <ul>
-              <li>
-                <a href="https://www.ebay.com/itm/255669246565">Buy Your LED Door Kit Here!</a>
-              </li>
-
-
-
-            </ul>
-          </nav>
         </div>
       </section>
       <section class="links">
         <div>
-          <h2>more links</h2>
+          <h2>my links</h2>
           <nav aria-label="Social media links">
             <ul>
               <li>
