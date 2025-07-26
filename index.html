@@ -1,84 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6589685178005556"
-     crossorigin="anonymous"></script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>jaison.fun</title>
-    <link rel="stylesheet" href="app.css" />
-    <meta id="theme" name="theme-color" content="blue" />
-    <meta name="description" content="a website of jaison dasika's things" />
-  </head>
-  <body>
-    <main>
-      <section class="social">
-        <div>
-          <h1>
-            jaison.fun
-          </h1>
-          <img id="bigpic" src="bigpic" style="display:none;" />
-          <script>
-          var isPlaying = false;
-          var colors = ["red", "blue", "green", "yellow", "purple"]; // Add more colors as needed
-          var currentColorIndex = 0;
-          
-          function changeBackgroundColor() {
-            document.body.style.backgroundColor = colors[currentColorIndex];
-            currentColorIndex = (currentColorIndex + 1) % colors.length;
-          }
-          
-          function playMusic(){
-            var audio = document.getElementById("audio");
-            var pic = document.getElementById('bigpic');
-            if (!isPlaying) {
-              audio.play();
-              pic.src = "discoball.gif";
-              pic.style.display='block';
-              isPlaying = true;
-              colorInterval = setInterval(changeBackgroundColor, 800); // Change color every second
-            } else {
-              audio.pause();
-              pic.style.display='none';
-              isPlaying = false;
-              document.body.style.backgroundColor = ""; // Reset to default background color
-              clearInterval(colorInterval); // Stop changing colors
-            }
-          }
-          </script>
-            <button aria-label="ONLY CLICK ONCE" onclick="playMusic()">PARTY MODE</button>
-            <audio id="audio" src="HouseMusic.mp3"></audio>
-        </div>
-      </section>
-      <section class="links">
-        <div>
-          <h2>my links</h2>
-          <nav aria-label="Social media links">
-            <ul>
-              <li>
-                <h3> 
-                  <a href="https://www.youtube.com/jaisondasika">Youtube</a>
-                </h3>
-              </li>
-              <li>
-                <h3>
-                  <a href="https://www.instagram.com/jaisonbuilds">Instagram With My Projects</a>
-                </h3>
-              </li>
-        
-              <li>
-                <h3>
-                  <a href="https://www.github.com/jaisondasika">GitHub</a>
-                </h3>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </section>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pivot Wallets</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    a.kickstarter-button {
+      display: inline-block;
+      background-color: #05ce78;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    a.kickstarter-button:hover {
+      background-color: #03b069;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pivot Wallets</h1>
+
+  <img src="your-wallet-photo.jpg" alt="Pivot Wallet Photo">
+
+  <a href="https://www.kickstarter.com/your-campaign-link" class="kickstarter-button" target="_blank">
+    Back Us on Kickstarter →
+  </a>
+
+</body>
 </html>
-
-
